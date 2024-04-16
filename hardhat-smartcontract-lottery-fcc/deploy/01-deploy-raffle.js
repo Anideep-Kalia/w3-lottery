@@ -24,7 +24,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         // Fund the subscription
         // Our mock makes it so we don't actually have to worry about sending fund
         await vrfCoordinatorV2Mock.fundSubscription(subscriptionId, FUND_AMOUNT)
-    } else {
+    } 
+    else {
         vrfCoordinatorV2Address = networkConfig[chainId]["vrfCoordinatorV2"]
         subscriptionId = networkConfig[chainId]["subscriptionId"]
     }
